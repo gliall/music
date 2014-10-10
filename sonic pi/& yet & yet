@@ -1,0 +1,54 @@
+use_bpm 135  
+
+
+define :cymbal_tick do
+  3.times do
+    sample :drum_cymbal_closed, amp:0.1
+    sleep 1.0/4
+  end
+end
+
+define :cymbals do
+  loop do
+    with_fx :reverb, room: 0.4 do
+      cymbal_tick
+      sleep 1.0/4
+      sample :drum_cymbal_closed, amp:0.2
+      sleep 2.0/4
+      sample :drum_cymbal_closed, amp:0.2
+      sleep 2.0/4
+      sample :drum_cymbal_open,  amp:0.3, sustain:0.2, release:0.1
+      sleep 1.0/4
+      sample :drum_cymbal_closed, amp:0.2
+      sleep 3.0/4
+      cymbal_tick
+      sleep 1.0/4
+
+    end
+    end
+  end
+
+
+use_synth :beep
+define :guitar do
+with_fx :reverb, room: 0.4 do
+  sleep 1.5
+  play :B3, attack: 0.05, release: 1.5
+  sleep 1.5
+  play :Fs4, attack: 0.05,release: 1.5
+  sleep 1.5
+  play :Ds4, attack: 0.05,release: 1.5
+  sleep 1.5
+  play :Cs4, attack: 0.05,release:1.5
+  sleep 10
+end
+end
+
+in_thread(name: :cymbals) do
+  loop{cymbals}
+end
+
+in_thread(name: :guitar) do
+  sleep 6.5
+  loop{guitar}
+end

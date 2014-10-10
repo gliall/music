@@ -1,0 +1,9 @@
+cps 1
+d1 $ slow $  whenmod 4 3 (density 2) (sound "[ifdrums hc:5]")
+d2 $ slow 4 $ sound     " ~  ~ ~ ~    ~ ~  ~  ~ ~  ~ ~  ~ ~ hh ~ hh"
+d1 $ sound "bd hh ~ ~ ~ ~ ~"
+d1 $  (sound "[bd bd] [hh  sn]")
+d1 $ silence
+d2 $ silence
+
+d1 $ sound "ifdrums hc:5"

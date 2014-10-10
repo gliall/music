@@ -1,0 +1,38 @@
+d1 $ stack [ 
+  sound "bd:6*8",
+  sound "~ xmas ~ hh:4 ~ hh:4 hh:4 [bd bd bd bd ]"
+]
+
+cps 1
+
+d1 $ sound "[amencutup:1*1,ab:3/16,ab:2/8, ~ ~ ~ ades2:8 ~ ~]"
+d1 $ rev 4 $ sound "toys:13/8"
+d1 stop
+d3 $ sound "sinewave1"
+hush
+
+cps 1
+d1 $ trunc 0.9 $ sound "foo:8" 
+hush
+d1 $ slow 32 $ striate' 32 (1/16) $ sound "bev"
+
+d1 $ slow 32 $ jux (rev) $ striate' 32 (1/16) $ sound "bev"
+
+d1 $ every 8 (striate 8) $  sound (brak "bd sn kurt")
+ 
+d1 $ silence
+
+d1 $  slow 8 $ striate 4 $ sound "bev"
+d1 $ slow 32 $ striate' 32 (1/16) $ sound "bev"
+d1 $ spread slow [2,4%3] $ sound "ho ho:2 ho:3 hc"
+d1 $ spread' slow "2 4%3" $ sound "ho ho:2 ho:3 hc"
+d1 $ spread' slow "[2 4%3, 3]" $ sound "ho ho:2 ho:3 hc"
+
+d1 $ slowspread ($) [density 2, rev, slow 2, striate 3, (|+| speed "0.8")]  $ sound "[bd*2 [~ bd]] [sn future]*2 cp jvbass*4"
+
+d1 $ interlace (sound  "bd sn kurt") (every 3 rev $ sound  "bd sn:2")
+
+
+d1 $ stack [ every 4 (0.25 <~) $ every 3 rev $ striate 64 $ sound "[lesshuman lesshuman/4 lesshuman/7 lesshuman/4]/2" |+| speed "[1 1 1 1.5]/8", spread' (striate) "[8 3 2 4]/2" $ slow 2 $ striate 64 $ sound "[[cities cities/1 cities cities/2]/4]" |+| speed "[1.0 0.8 1.0 0.9]/4" |+| shape "-0.4"]
+
+d1 $ spread' slow "[2 3 1]/4" $ jux (iter 8) $ every 4 rev $ sound "[bd*6 [sn*3 bd*2] [bd*4 sn] [sn*6]]" |+| speed ((+1.0) slow 1 sinewave1) |+| cutoff ((*0.5) slow 2 sinewave1) |+| resonance ((*0.5) slow 3 sinewave1)

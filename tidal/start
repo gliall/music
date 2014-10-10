@@ -1,0 +1,2 @@
+jackd -d coreaudio &
+cd Dirt;./Dirt/dirt &
