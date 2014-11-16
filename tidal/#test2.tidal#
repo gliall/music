@@ -1,9 +1,7 @@
-cps 1
-d1 $ slow $  whenmod 4 3 (density 2) (sound "[ifdrums hc:5]")
-d2 $ slow 4 $ sound     " ~  ~ ~ ~    ~ ~  ~  ~ ~  ~ ~  ~ ~ hh ~ hh"
-d1 $ sound "bd hh ~ ~ ~ ~ ~"
-d1 $  (sound "[bd bd] [hh  sn]")
-d1 $ silence
-d2 $ silence
+d1 $ sound "bd:6"
 
-d1 $ sound "ifdrums hc:5"
+d2 $ striate 8 $ brak $  ((1/4) ~>) $  sound "sf:8  pluck:9 ~ "
+
+d3 $ brak $ sound "pluck:1 pluck:2 pluck:3 pluck:4"
+
+d4 $ brak $  sound "wind:1 win"
