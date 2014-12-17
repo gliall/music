@@ -1,0 +1,41 @@
+cps 0.5
+
+
+d1 $ sound "aberattle:6 [aberattle:3 aberattle:4 [aberattle:3 aberattle:3]? aberattle:5?]"
+
+d2 $ slowspread ($) [striate 3, striate 3] 
+ $ sound "aberattle:6 [aberattle:3 aberattle:4 [aberattle:3 aberattle:3]? aberattle:5?]"
+
+
+
+
+
+d2 $ smash 8 [2] $  sound "[abedrum:6]*3 [abedrum:5]*2 [abedrum:4 abedrum:3]? abedrum:5 "
+
+d1 $ striate 1 $  sound "[abedrum:4 abedrum:3] [abedrum:5 [abedrum:6]*2, [abedrum:5]*3]" 
+|+| vowel "a o i"
+|+| crush "4 6"
+
+d3 $ sound "abenote:1 [abenote:6 abenote:4]*2?"
+
+
+
+
+d3 $every 4 $ striate 4 $ sound "abeflute:1" 
+|+| accelerate "-3" 
+
+d3 $ sound "abenote:1 [abenote:6 abenote:4]*2?"
+
+d3 $ sound "abenote:1 [abenote:6 abenote:4]*2"
+
+
+d1 $ (spread slow "1%4 2 1 3" $ spread (striate) [2,1,8] $ sound
+"abedrum:2 abedrum:3 aberattle:1 abedrum:5")
+  |+| speed "[1 2 1 1]/2"
+
+
+
+
+d1 $ silence
+d2 $ silence
+d3 $ silence

@@ -1,0 +1,7 @@
+
+
+
+d1 $ striate 2 $  sound "[abedrum:4 abedrum:3] abedrum:5 [abedrum:6]*8 [abedrum:5]*3"
+d1 $ striate 4 $  sound "[abedrum:4 abedrum:3] [abedrum:5 [abedrum:6]*2 [abedrum:5]*3]"
+
+d1 $ silence
