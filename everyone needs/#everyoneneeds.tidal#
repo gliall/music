@@ -1,0 +1,9 @@
+cps 0.17647
+
+d1 $ slow 0.5 $  sound "808bd:3 ~ ~ ~   ~ ~ ~   [808bd]*4"
+
+d2 $ striate 4 $ sound "everyoneneeds" 
+
+
+d1 $ silence
+d2 $ silence
