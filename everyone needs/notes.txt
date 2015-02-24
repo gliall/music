@@ -1,0 +1,4 @@
+Key = Am
+progression Gm F Eb-G-Bb  Dm
+or 
+Am - 1 7 6 5

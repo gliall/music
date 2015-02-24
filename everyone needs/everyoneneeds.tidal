@@ -1,15 +1,50 @@
 cps 0.17647
 
-d1 $ sound $ brak "808bd:3 ~  808cp ~  808bd:4  ~ 808cp   [808bd]*4"
+d1 $ sound $ brak  "808bd:3 ~  808cp ~  808bd:4  ~ 808cp   [808bd]*4"
 
-d1 $ smash 4 [2,2, 2, 2] $ sound  "808bd:3 ~  808cp   [808bd:2]*4   808bd:4  ~ 808cp   [808bd]*4"
+d1 $ sound  "808bd:3 ~  808cp   [808bd:2]*4   808bd:4  ~ 808cp   [808bd]*4"
+
+d1 $ slow 0.5 $ smash 2 [2] $ sound  "808bd:3 ~  808cp   [808bd:2]*4   808bd:4  ~ 808cp   [808bd]*4"
+
 d1 $ sound  "[808bd:3 ~  808cp   [808bd:2]   808bd:4  ~ 808cp   [808bd*2 808bd]?]*2"
 
 
-d1 $ stut 4 1.1 0.1 $ sound "808bd"
-
 d2 $ sound "everyoneneeds" 
-d2 $ smash 2 [1] $ sound "everyoneneeds"
+d2 $ striate' 8 (1/24) $ sound "everyoneneeds"
+
+cps 1
+
+d1 $ slow 32 $ striate' 32 (1/16) $ sound "bev"
+
+
+d1 $ chop 8 $ sound "bd*4 [sn cp] [hh future]*2 [cp feel]"
+
+d1 $ iter 4 $ sound "bd hh sn cp"
+
+d1 $ seqP [ 
+  (0, 128, sound "bd bd*2"), 
+  (8, 128, sound "hh*2 [sn cp] cp future*4")
+]
+
+
+d1 $ slow 2 $ degrade $ sound "[[[feel:5*8,feel*3] feel:3*8], feel*4]"
+   |+| accelerate "-6"
+   |+| speed "2"
+
+d1 $ slow 2 $ sound "[[[feel:5*8,feel*3] feel:3*8]?, feel*4]"
+
+d1 $ slow 2 $ degradeBy 0.1 $ sound "[[[feel:5*8,feel*3] feel:3*8], feel*4]"
+   |+| accelerate "-6"
+   |+| speed "2"
+
+d1 $ sound (brak "bd sn kurt sn")
+
+d1 $ spread slow [2,4%3] $ sound "ho ho:2 ho:3 hc"
+
+d1 $ spread' slow "[2 4%3, 3]" $ sound "ho ho:2 ho:3 hc"
+
+d1 $ striate 2 $ sound "ho ho:2 ho:3 hc"
+
 
 d1 $ silence
 d2 $ silence

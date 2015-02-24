@@ -1,12 +1,13 @@
-cps 0.5
+cps 0.25
+
+d1 $ sound "bd bd [[bd sn] bd hh] bd"
 
 
 #drums
-d1 $ smash 16 [12] $  sound "[abedrum:6]*3 [abedrum:5]*2 [abedrum:4 abedrum:3] abedrum:5 "  |+| gain "1" |+| vowel "o i u a e" |+| speed "0.5"
+d1 $ smash 16 [16] $  sound "[abedrum:6]*4 [abedrum:5]*2 [abedrum:4 abedrum:3] abedrum:5 "  |+| gain "6" |+| vowel "o i u a o"
 
-d1 $ silence
 
-d1 $ slow 2 $ sound "[abedrum:2 abedrum:2] [[abedrum:5 ~ abedrum:2]*2 [abedrum:5 abedrum:2 ~ ] abeflute]" 
+d1 $ slow 2 $ sound "[abedrum:5 abedrum:2] [[abedrum:5 ~ abedrum:2]*2 [abedrum:5 abedrum:2 ~ ] abeflute]" |+| speed "5 3"
 
 
 d1 $ slowspread ($) [density 2, rev] $  sound "[abedrum:4 abedrum:3] [abedrum:5 [abedrum:6]*2, [abedrum:5]*3]" 
@@ -63,7 +64,7 @@ d4 $ striate 16 $ sound "abeflute:3*8 ~ " |+| speed "[4]"
 
 
 #voice 
-d4 $ smash 16 [4]  $ sound "abeflute:5 abeflute:5" |+| vowel "a"
+d4 $ brak $ sound "abeflute:5 abeflute:5" |+| vowel "a"
 
 
 d1 $ silence
